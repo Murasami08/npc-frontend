@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+@import url(null.css);
+
+.head {
+  height: 100%; 
+  width: 260px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: blue; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+.head .link{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border-bottom: 1px solid rgb(188, 184, 184);
+  margin: 25px auto;
+}
+.main-page {
+  margin-left: 260px; 
+  padding: 0px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.citizen-directory{
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.citizen-directory h2{
+font-size: 36px;
+color: blue;
+margin-bottom: 25px;
+}
+.citizen-directory input{
+width: 300px;
+padding: 12px 20px;
+margin-bottom: 12px;
+border: 3px solid blue;
+border-radius: 15px;
+}
+.citizen-directory input:focus{
+  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
+  10px 10px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.citizen-directory ul{
+  font-size: 24px;
+  color: blue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.citizen-directory ul li{
+margin-top: 15px;
+/* text-decoration: underline; */
+cursor: pointer;
+width: 250px;
+border-bottom: 1px solid blue;
+}
+.citizen-directory p{
+  margin-top: 25px;
+font-size: 18px;
+color: blue;
+font-weight: bold;
+}
+.citizen-detail{
+  margin-top: 20px;
+  color: blue;
+  padding: 10px;
+  border: 1px solid #eee;
+  box-shadow: -2px 12px 31px 8px rgba(34, 60, 80, 0.2);
+  width: 800px;
+}
+.citizen-detail h3{
+  font-size: 30px;
+  color: blue;
+  margin-bottom: 20px;
+}
+.citizen-detail p{
+  margin: 20px 0;
+  font-size: 20px;
+}
+.citizen-detail h4{
+  font-size: 24px;
+  color: blue;
+  margin-bottom: 10px;
+}
+.citizen-detail ul{
+  font-size: 18px;
+}
+.citizen-detail button{
+  width: 300px;
+  padding: 12px 20px;
+  background: blue;
+  color: white;
+  margin-top: 25px;
+  border-radius: 5px;
+}
+.citizen-detail button:hover{
+  background: rgb(159, 85, 85);
+}
+.add-main{
+  margin-top: 20px;
+  padding: 10px;
+}
+.add-main h1{
+  font-size: 36px;
+  color: blue;
+  margin-bottom: 20px;
+}
+.card{
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.card h2{
+  font-size: 24px;
+  color: blue;
+  margin-bottom: 20px;
+}
+.card label {
+  display: block;
+  margin: 5px 0;
+}
+.card input[type="text"],
+.card input[type="date"] {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.card button {
+  background-color: blue;
   color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 500px;
+  margin-top: 20px;
+}
+.Table-main table{
+  width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;  
 }
 
-.App-link {
-  color: #61dafb;
+.Table-main table th{
+  font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+} 
+.Table-main table td{
+  padding: 5px;
+  border: 1px solid #dddddd;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Table-main table tr td:first-child, .Table-main table tr th:first-child{
+  border-left: none;
+}
+.Table-main table tr td:last-child, .Table-main table tr th:last-child{
+  border-right: none;
+}
+.Table-main h1{
+  font-size: 36px;
+  color: blue;
+  margin-bottom: 20px;
+}
+@media screen and (max-height: 450px) {
+  .head {
+    padding-top: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  .head .link {
+    font-size: 18px;
   }
 }
